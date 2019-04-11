@@ -1,0 +1,19 @@
+{
+    "name": "aristidesbneto/framework-php",
+    "description": "Mini Framework PHP voltado para aprendizagem",
+    "authors": [
+        {
+            "name": "Aristides Neto",
+            "email": "aristidesbneto@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aristides\\": "src"
+        }
+    }
+}

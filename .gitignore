@@ -1,0 +1,4 @@
+/vendor
+/phpdocker/mysql
+/config/database.php
+deploy.php

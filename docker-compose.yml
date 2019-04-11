@@ -1,0 +1,40 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    mysql:
+      image: mysql:5.7
+      restart: always
+      container_name: fmw-mysql
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/mysql:/var/lib/mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=framework
+        - MYSQL_USER=framework
+        - MYSQL_PASSWORD=framework
+      ports:
+        - "1057:3306"
+
+    webserver:
+      image: nginx:alpine
+      container_name: fmw-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "1055:80"
+
+    php-fpm:
+      build: phpdocker/php-fpm
+      container_name: fmw-php-fpm
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+
