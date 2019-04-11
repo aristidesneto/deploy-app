@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Usuários!</title>
+    <title>Teste de Deploy!</title>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
         
         <div class="btn-group mb-4">
             <a class="btn btn-primary" href="/" role="button">Home</a>
-            <a class="btn btn-primary" href="/user_create" role="button">Criar usuário</a>
+            <a class="btn btn-primary" href="/user_create" role="button">Cadastrar Usuário</a>
         </div>
 
         <?php require $layout->load(); ?>
